@@ -17,4 +17,10 @@ public class AtaqueAgua extends Ataque implements IAtaque {
             return false;
         }
     }
+
+    @Override
+    public void attack(Entrenador entrenador) {
+
+        entrenador.getPokemonActivo().danoAgua(this);
+    }
 }

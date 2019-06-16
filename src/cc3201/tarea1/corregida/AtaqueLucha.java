@@ -17,4 +17,10 @@ public class AtaqueLucha extends Ataque implements IAtaque {
             return false;
         }
     }
+
+    @Override
+    public void attack(Entrenador entrenador) {
+
+        entrenador.getPokemonActivo().danoLucha(this);
+    }
 }

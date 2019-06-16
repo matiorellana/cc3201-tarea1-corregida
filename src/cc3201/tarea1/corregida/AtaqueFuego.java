@@ -17,4 +17,10 @@ public class AtaqueFuego extends Ataque {
             return false;
         }
     }
+
+    @Override
+    public void attack(Entrenador entrenador) {
+
+        entrenador.getPokemonActivo().danoFuego(this);
+    }
 }

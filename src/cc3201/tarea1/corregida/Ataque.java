@@ -26,4 +26,6 @@ public abstract class Ataque implements IAtaque{
     }
 
     public abstract boolean comprobar(Pokemon pokemon);
+
+    public abstract void attack(Entrenador entrenador);
 }

@@ -5,4 +5,6 @@ public interface IAtaque {
     int getDano();
 
     boolean comprobar(Pokemon pokemon);
+
+    void attack(Entrenador entrenador);
 }

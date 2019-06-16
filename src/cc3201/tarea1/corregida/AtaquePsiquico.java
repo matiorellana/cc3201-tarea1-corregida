@@ -17,4 +17,10 @@ public class AtaquePsiquico extends Ataque implements IAtaque{
             return false;
         }
     }
+
+    @Override
+    public void attack(Entrenador entrenador) {
+
+        entrenador.getPokemonActivo().danoPsiquico(this);
+    }
 }
