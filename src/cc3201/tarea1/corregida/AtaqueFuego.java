@@ -10,7 +10,7 @@ public class AtaqueFuego extends Ataque {
     @Override
     public boolean comprobar(Pokemon pokemon) {
 
-        if (pokemon.energias.get("Fuego") >= this.getCoste()){
+        if (pokemon.getEnergias().get("Fuego") >= this.getCoste()){
             return true;
         }
         else{
