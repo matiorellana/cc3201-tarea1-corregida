@@ -84,19 +84,17 @@ public abstract class Pokemon implements IPokemon {
         return this.energias;
     }
 
-    public abstract void attack(Entrenador entrenador);
+    protected abstract void danoFuego(Ataque ataque);
 
-    public abstract void danoFuego(Pokemon pokemon);
+    protected abstract void danoAgua(Ataque ataque);
 
-    public abstract void danoAgua(Pokemon pokemon);
+    protected abstract void danoPlanta(Ataque ataque);
 
-    public abstract void danoPlanta(Pokemon pokemon);
+    protected abstract void danoRayo(Ataque ataque);
 
-    public abstract void danoRayo(Pokemon pokemon);
+    protected abstract void danoLucha(Ataque ataque);
 
-    public abstract void danoLucha(Pokemon pokemon);
-
-    public abstract void danoPsiquico(Pokemon pokemon);
+    protected abstract void danoPsiquico(Ataque ataque);
 
 
 }

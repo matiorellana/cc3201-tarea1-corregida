@@ -12,7 +12,5 @@ public interface IPokemon extends Carta {
 
     void danoEstandar(Ataque ataque);
 
-    void attack(Entrenador entrenador);
-
     void seleccionarAtaque(int index);
 }
