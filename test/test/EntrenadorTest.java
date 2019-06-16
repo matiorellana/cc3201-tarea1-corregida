@@ -220,7 +220,7 @@ public class EntrenadorTest {
 
         assertEquals(120, rival.getPokemonActivo().getHp());
         entrenador.atacar(rival);
-        assertEquals(90, rival.getPokemonActivo().getHp());
+        assertEquals(60, rival.getPokemonActivo().getHp());
     }
 
     @Test
@@ -258,7 +258,7 @@ public class EntrenadorTest {
 
             entrenador.getPokemonActivo().addEnergia(lucha);
         }
-        for(int i = 0; i< 4; i++){
+        for(int i = 0; i< 2; i++){
 
             entrenador.atacar(rival);
         }

@@ -59,7 +59,7 @@ public class Entrenador {
 
         if (this.getPokemonActivo().getAtaqueSeleccionado().comprobar(this.getPokemonActivo())){
 
-            this.getPokemonActivo().attack(entrenador);
+            this.getPokemonActivo().getAtaqueSeleccionado().attack(entrenador);
             entrenador.removerPokemon();
         }
     }
