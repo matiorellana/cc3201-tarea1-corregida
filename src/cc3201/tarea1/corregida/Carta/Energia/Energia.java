@@ -1,6 +1,9 @@
-package cc3201.tarea1.corregida;
+package cc3201.tarea1.corregida.Carta.Energia;
 
-public abstract class Energia implements IEnergia{
+import cc3201.tarea1.corregida.Entrenador;
+import cc3201.tarea1.corregida.Carta.Pokemon.Pokemon;
+
+public abstract class Energia implements IEnergia {
 
     protected String nombre;
 

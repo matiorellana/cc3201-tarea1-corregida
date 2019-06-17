@@ -1,6 +1,9 @@
-package cc3201.tarea1.corregida;
+package cc3201.tarea1.corregida.Carta.Ataque;
 
-public abstract class Ataque implements IAtaque{
+import cc3201.tarea1.corregida.Entrenador;
+import cc3201.tarea1.corregida.Carta.Pokemon.Pokemon;
+
+public abstract class Ataque implements IAtaque {
 
     protected String nombre;
     protected int dano;

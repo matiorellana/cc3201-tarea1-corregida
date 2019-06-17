@@ -1,4 +1,7 @@
-package cc3201.tarea1.corregida;
+package cc3201.tarea1.corregida.Carta.Ataque;
+
+import cc3201.tarea1.corregida.Entrenador;
+import cc3201.tarea1.corregida.Carta.Pokemon.Pokemon;
 
 public class AtaqueLucha extends Ataque implements IAtaque {
 

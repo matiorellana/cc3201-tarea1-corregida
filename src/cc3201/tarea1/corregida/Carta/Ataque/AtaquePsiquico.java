@@ -1,6 +1,9 @@
-package cc3201.tarea1.corregida;
+package cc3201.tarea1.corregida.Carta.Ataque;
 
-public class AtaquePsiquico extends Ataque implements IAtaque{
+import cc3201.tarea1.corregida.Entrenador;
+import cc3201.tarea1.corregida.Carta.Pokemon.Pokemon;
+
+public class AtaquePsiquico extends Ataque implements IAtaque {
 
     public AtaquePsiquico(String nombre, int dano, int coste, String descripcion) {
 

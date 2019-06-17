@@ -1,6 +1,8 @@
-package cc3201.tarea1.corregida;
+package cc3201.tarea1.corregida.Carta.Energia;
 
-public class EnergiaFuego extends Energia implements IEnergia{
+import cc3201.tarea1.corregida.Carta.Pokemon.Pokemon;
+
+public class EnergiaFuego extends Energia implements IEnergia {
 
     public EnergiaFuego(String nombre){
 

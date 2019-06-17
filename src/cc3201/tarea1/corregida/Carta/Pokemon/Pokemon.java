@@ -1,4 +1,8 @@
-package cc3201.tarea1.corregida;
+package cc3201.tarea1.corregida.Carta.Pokemon;
+
+import cc3201.tarea1.corregida.Carta.Ataque.Ataque;
+import cc3201.tarea1.corregida.Carta.Energia.Energia;
+import cc3201.tarea1.corregida.Entrenador;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -84,17 +88,17 @@ public abstract class Pokemon implements IPokemon {
         return this.energias;
     }
 
-    protected abstract void danoFuego(Ataque ataque);
+    public abstract void danoFuego(Ataque ataque);
 
-    protected abstract void danoAgua(Ataque ataque);
+    public abstract void danoAgua(Ataque ataque);
 
-    protected abstract void danoPlanta(Ataque ataque);
+    public abstract void danoPlanta(Ataque ataque);
 
-    protected abstract void danoRayo(Ataque ataque);
+    public abstract void danoRayo(Ataque ataque);
 
-    protected abstract void danoLucha(Ataque ataque);
+    public abstract void danoLucha(Ataque ataque);
 
-    protected abstract void danoPsiquico(Ataque ataque);
+    public abstract void danoPsiquico(Ataque ataque);
 
 
 }
