@@ -1,10 +1,11 @@
 package cc3201.tarea1.corregida.Carta.Pokemon;
 
 import cc3201.tarea1.corregida.Ataque.Ataque;
+import cc3201.tarea1.corregida.Entrenador;
 
 import java.util.ArrayList;
 
-public class PokemonFuego extends Pokemon implements IPokemon {
+public abstract class PokemonFuego extends Pokemon implements IPokemon {
 
     public PokemonFuego(String nombre, int id, int salud, ArrayList<Ataque> ataques) {
 
@@ -46,4 +47,6 @@ public class PokemonFuego extends Pokemon implements IPokemon {
 
         this.danoEstandar(ataque);
     }
+
+    public abstract void play(Entrenador entrenador);
 }
