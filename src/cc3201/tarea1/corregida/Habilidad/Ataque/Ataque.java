@@ -37,9 +37,9 @@ public abstract class Ataque implements IAtaque {
     }
 
     @Override
-    public void activar(Entrenador entrenador){
+    public void activar(Entrenador jugaador, Entrenador rival){
 
-        this.attack(entrenador);
+        this.attack(rival);
     }
 
     public abstract boolean comprobar(Pokemon pokemon);
