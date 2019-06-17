@@ -8,5 +8,5 @@ public interface IHabilidad {
 
     int getCoste();
 
-    void activar(Entrenador entrenador);
+    void activar(Entrenador jugador, Entrenador rival);
 }

@@ -115,6 +115,16 @@ public abstract class Pokemon implements IPokemon {
         return this.nombre;
     }
 
+    @Override
+    public void setSalud(int hp){
+        if(hp<0){
+            this.salud = 0;
+        }
+        else{
+            this.salud = hp;
+        }
+    }
+
     public abstract void danoFuego(Ataque ataque);
 
     public abstract void danoAgua(Ataque ataque);

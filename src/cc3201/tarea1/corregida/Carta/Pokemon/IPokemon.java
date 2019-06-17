@@ -29,4 +29,6 @@ public interface IPokemon extends Carta {
     int getID();
 
     void heredarEnergia(Pokemon pokemon);
+
+    void setSalud(int hp);
 }

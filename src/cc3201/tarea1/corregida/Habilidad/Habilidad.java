@@ -26,5 +26,5 @@ public abstract class Habilidad implements IHabilidad {
     }
 
     @Override
-    public abstract void activar(Entrenador entrenador);
+    public abstract void activar(Entrenador jugador, Entrenador rival);
 }
