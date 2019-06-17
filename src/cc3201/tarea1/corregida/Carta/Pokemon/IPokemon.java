@@ -1,6 +1,6 @@
 package cc3201.tarea1.corregida.Carta.Pokemon;
 
-import cc3201.tarea1.corregida.Carta.Ataque.Ataque;
+import cc3201.tarea1.corregida.Ataque.Ataque;
 import cc3201.tarea1.corregida.Carta.Carta;
 import cc3201.tarea1.corregida.Carta.Energia.Energia;
 

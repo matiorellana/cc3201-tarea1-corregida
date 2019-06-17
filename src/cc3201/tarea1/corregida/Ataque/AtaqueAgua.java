@@ -1,11 +1,11 @@
-package cc3201.tarea1.corregida.Carta.Ataque;
+package cc3201.tarea1.corregida.Ataque;
 
 import cc3201.tarea1.corregida.Entrenador;
 import cc3201.tarea1.corregida.Carta.Pokemon.Pokemon;
 
-public class AtaqueLucha extends Ataque implements IAtaque {
+public class AtaqueAgua extends Ataque implements IAtaque {
 
-    public AtaqueLucha(String nombre, int dano, int coste, String descripcion) {
+    public AtaqueAgua(String nombre, int dano, int coste, String descripcion) {
 
         super(nombre, dano, coste, descripcion);
     }
@@ -13,7 +13,7 @@ public class AtaqueLucha extends Ataque implements IAtaque {
     @Override
     public boolean comprobar(Pokemon pokemon) {
 
-        if (pokemon.getEnergias().get("Lucha") >= this.getCoste()){
+        if (pokemon.getEnergias().get("Agua") >= this.getCoste()){
             return true;
         }
         else{
@@ -24,6 +24,6 @@ public class AtaqueLucha extends Ataque implements IAtaque {
     @Override
     public void attack(Entrenador entrenador) {
 
-        entrenador.getPokemonActivo().danoLucha(this);
+        entrenador.getPokemonActivo().danoAgua(this);
     }
 }
