@@ -1,13 +1,16 @@
-package cc3201.tarea1.corregida.Carta.Pokemon;
+package cc3201.tarea1.corregida.Carta.Pokemon.Basico;
 
 import cc3201.tarea1.corregida.Ataque.Ataque;
+import cc3201.tarea1.corregida.Carta.Pokemon.IPokemon;
+import cc3201.tarea1.corregida.Carta.Pokemon.PokemonRayo;
+import cc3201.tarea1.corregida.Carta.Pokemon.VisitorPokemon;
 import cc3201.tarea1.corregida.Entrenador;
 
 import java.util.ArrayList;
 
-public class PokemonBasicoPlanta extends PokemonPlanta implements IPokemon, PokemonBasico {
+public class PokemonBasicoRayo extends PokemonRayo implements IPokemon, PokemonBasico {
 
-    public PokemonBasicoPlanta(String nombre, int id, int salud, ArrayList<Ataque> ataques){
+    public PokemonBasicoRayo(String nombre, int id, int salud, ArrayList<Ataque> ataques){
 
         super(nombre, id, salud, ataques);
     }
