@@ -15,8 +15,9 @@ public abstract class Pokemon implements IPokemon {
     protected Ataque ataqueSeleccionado;
     protected ArrayList<Ataque> ataques;
     protected HashMap<String, Integer> energias;
+    protected VisitorPokemon visitor;
 
-    protected Pokemon(String nombre, int id, int salud, ArrayList<Ataque> ataques){
+    protected Pokemon(String nombre, int id, int salud, ArrayList<Ataque> ataques) {
 
         this.nombre = nombre;
         this.id = id;
@@ -25,67 +26,87 @@ public abstract class Pokemon implements IPokemon {
         this.energias = new HashMap<>();
     }
 
-    public void jugar(Entrenador entrenador){
+    @Override
+    public void jugar(Entrenador entrenador) {
 
-        entrenador.addBanca(this);
+        this.play(entrenador);
     }
 
-    public int getHp(){
+    @Override
+    public int getHp() {
 
         return this.salud;
     }
-
-    public void addEnergia(Energia energia){
+    @Override
+    public void addEnergia(Energia energia) {
 
         energia.anadir(this);
     }
+    @Override
+    public boolean hpCero() {
 
-    public boolean hpCero(){
-
-        if(this.salud == 0){
+        if (this.salud == 0) {
             return true;
-        }
-        else{
+        } else {
             return false;
         }
     }
 
-    public void danoDebilidad(Ataque ataque){
+    @Override
+    public void danoDebilidad(Ataque ataque) {
 
         this.salud -= ataque.getDano() * 2;
-        if(this.salud < 0) {
+        if (this.salud < 0) {
             this.salud = 0;
         }
     }
 
-    public void danoResistencia(Ataque ataque){
+    @Override
+    public void danoResistencia(Ataque ataque) {
 
         int reduccion = ataque.getDano() - 30;
-        if (reduccion > 0){
+        if (reduccion > 0) {
             this.salud -= reduccion;
         }
     }
 
-    public void danoEstandar(Ataque ataque){
+    @Override
+    public void danoEstandar(Ataque ataque) {
 
         this.salud -= ataque.getDano();
-        if(this.salud < 0){
+        if (this.salud < 0) {
             this.salud = 0;
         }
     }
-    public void seleccionarAtaque(int index){
+
+    @Override
+    public void seleccionarAtaque(int index) {
 
         this.ataqueSeleccionado = this.ataques.get(index);
     }
 
-    public Ataque getAtaqueSeleccionado(){
+    @Override
+    public Ataque getAtaqueSeleccionado() {
 
         return this.ataqueSeleccionado;
     }
 
-    public HashMap<String, Integer> getEnergias(){
+    @Override
+    public HashMap<String, Integer> getEnergias() {
 
         return this.energias;
+    }
+
+    @Override
+    public int getID() {
+
+        return this.id;
+    }
+
+    @Override
+    public void heredarEnergia(Pokemon pokemon) {
+
+        this.energias = pokemon.getEnergias();
     }
 
     public abstract void danoFuego(Ataque ataque);
@@ -100,5 +121,5 @@ public abstract class Pokemon implements IPokemon {
 
     public abstract void danoPsiquico(Ataque ataque);
 
-
+    public abstract void play(Entrenador entrenador);
 }
