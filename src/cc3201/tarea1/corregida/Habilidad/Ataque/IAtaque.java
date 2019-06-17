@@ -1,9 +1,10 @@
-package cc3201.tarea1.corregida.Ataque;
+package cc3201.tarea1.corregida.Habilidad.Ataque;
 
 import cc3201.tarea1.corregida.Entrenador;
 import cc3201.tarea1.corregida.Carta.Pokemon.Pokemon;
+import cc3201.tarea1.corregida.Habilidad.IHabilidad;
 
-public interface IAtaque {
+public interface IAtaque extends IHabilidad {
 
     int getDano();
 

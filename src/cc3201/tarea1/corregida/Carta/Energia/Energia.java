@@ -18,5 +18,11 @@ public abstract class Energia implements IEnergia {
         entrenador.getPokemonActivo().addEnergia(this);
     }
 
+    @Override
+    public String getNombre(){
+
+        return this.nombre;
+    }
+
     public abstract void anadir(Pokemon pokemon);
 }

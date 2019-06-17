@@ -1,6 +1,6 @@
 package cc3201.tarea1.corregida.Carta.Pokemon;
 
-import cc3201.tarea1.corregida.Ataque.Ataque;
+import cc3201.tarea1.corregida.Habilidad.Ataque.Ataque;
 import cc3201.tarea1.corregida.Entrenador;
 
 import java.util.ArrayList;

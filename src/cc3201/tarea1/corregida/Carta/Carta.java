@@ -5,4 +5,6 @@ import cc3201.tarea1.corregida.Entrenador;
 public interface Carta {
 
     void jugar(Entrenador entrenador);
+
+    String getNombre();
 }

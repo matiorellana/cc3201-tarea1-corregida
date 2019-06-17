@@ -1,6 +1,6 @@
 package cc3201.tarea1.corregida.Carta.Pokemon.Fase1;
 
-import cc3201.tarea1.corregida.Ataque.Ataque;
+import cc3201.tarea1.corregida.Habilidad.Ataque.Ataque;
 import cc3201.tarea1.corregida.Carta.Pokemon.IPokemon;
 import cc3201.tarea1.corregida.Carta.Pokemon.PokemonLucha;
 import cc3201.tarea1.corregida.Carta.Pokemon.VisitorPokemon;

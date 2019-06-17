@@ -1,6 +1,6 @@
 package cc3201.tarea1.corregida.Carta.Pokemon;
 
-import cc3201.tarea1.corregida.Ataque.Ataque;
+import cc3201.tarea1.corregida.Habilidad.Ataque.Ataque;
 import cc3201.tarea1.corregida.Carta.Energia.Energia;
 import cc3201.tarea1.corregida.Entrenador;
 
@@ -107,6 +107,12 @@ public abstract class Pokemon implements IPokemon {
     public void heredarEnergia(Pokemon pokemon) {
 
         this.energias = pokemon.getEnergias();
+    }
+
+    @Override
+    public String getNombre(){
+
+        return this.nombre;
     }
 
     public abstract void danoFuego(Ataque ataque);
