@@ -11,12 +11,18 @@ public class Entrenador {
     private ArrayList<Pokemon> banca;
     private ArrayList<Carta> mano;
     private Pokemon activo;
-    private Ataque ataqueSeleccionado;
+
+    private Mazo mazo;
+    private Descarte cementerio;
+    private Premio premio;
 
     public Entrenador(){
 
         this.banca = new ArrayList<>();
         this.mano = new ArrayList<>();
+        this.mazo = new Mazo();
+        this.cementerio = new Descarte();
+        this.premio = new Premio();
     }
 
     public void juega(Carta carta){
@@ -77,10 +83,24 @@ public class Entrenador {
 
         if(this.getPokemonActivo().hpCero()){
 
+            this.descartarCarta(this.getPokemonActivo());
             this.getBanca().remove(0);
             this.activo = null;
         }
     }
 
+    public void addCartaMazo(Carta carta){
 
+        this.mazo.addCarta(carta);
+    }
+
+    public void robarMazo(){
+
+        this.mazo.robar(this);
+    }
+
+    public void descartarCarta(Carta carta){
+
+        this.cementerio.addCementerio(carta);
+    }
 }
