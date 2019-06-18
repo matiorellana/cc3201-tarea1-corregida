@@ -1,6 +1,14 @@
-package test;
+package test.EnergiaTest;
 
 import cc3201.tarea1.corregida.*;
+import cc3201.tarea1.corregida.Carta.Pokemon.Basico.PokemonBasicoAgua;
+import cc3201.tarea1.corregida.Habilidad.Ataque.Ataque;
+import cc3201.tarea1.corregida.Habilidad.Ataque.AtaqueAgua;
+import cc3201.tarea1.corregida.Carta.Energia.Energia;
+import cc3201.tarea1.corregida.Carta.Energia.EnergiaFuego;
+import cc3201.tarea1.corregida.Carta.Pokemon.Pokemon;
+import cc3201.tarea1.corregida.Carta.Pokemon.PokemonAgua;
+import cc3201.tarea1.corregida.Habilidad.IHabilidad;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -14,7 +22,7 @@ public class EnergiaFuegoTest {
     private Pokemon pokeAgua;
     private Energia fuego;
     private Ataque atkAgua;
-    private ArrayList<Ataque> ataques;
+    private ArrayList<IHabilidad> ataques;
 
     @Before
     public void setUp() throws Exception {
@@ -24,7 +32,7 @@ public class EnergiaFuegoTest {
         ataques = new ArrayList<>();
         ataques.add(atkAgua);
 
-        pokeAgua = new PokemonAgua("water", 1, 50, ataques);
+        pokeAgua = new PokemonBasicoAgua("water", 1, 50, ataques);
 
         entrenador = new Entrenador();
 

@@ -1,6 +1,11 @@
 package test;
 
 import cc3201.tarea1.corregida.*;
+import cc3201.tarea1.corregida.Carta.Pokemon.Basico.*;
+import cc3201.tarea1.corregida.Habilidad.Ataque.*;
+import cc3201.tarea1.corregida.Carta.Energia.*;
+import cc3201.tarea1.corregida.Carta.Pokemon.*;
+import cc3201.tarea1.corregida.Habilidad.IHabilidad;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -34,9 +39,9 @@ public class EntrenadorTest {
     private Ataque atkPsiquico;
     private Ataque atkRayo;
 
-    ArrayList<Ataque> ataques1;
-    ArrayList<Ataque> ataques2;
-    ArrayList<Ataque> ataques3;
+    ArrayList<IHabilidad> ataques1;
+    ArrayList<IHabilidad> ataques2;
+    ArrayList<IHabilidad> ataques3;
 
     @Before
     public void setUp() throws Exception {
@@ -48,28 +53,28 @@ public class EntrenadorTest {
         atkPsiquico = new AtaquePsiquico("e5", 25, 8, "prueba5");
         atkRayo = new AtaqueRayo("f6", 7, 10, "prueba6");
 
-        ataques1 = new ArrayList<Ataque>();
+        ataques1 = new ArrayList<>();
         ataques1.add(atkAgua);
         ataques1.add(atkFuego);
         ataques1.add(atkPlanta);
         ataques1.add(atkRayo);
 
-        ataques2 = new ArrayList<Ataque>();
+        ataques2 = new ArrayList<>();
         ataques2.add(atkLucha);
         ataques2.add(atkPsiquico);
 
-        ataques3 = new ArrayList<Ataque>();
+        ataques3 = new ArrayList<>();
         ataques3.add(atkRayo);
 
         entrenador = new Entrenador();
         rival = new Entrenador();
 
-        pokePlanta = new PokemonPlanta("planta",1, 100, ataques1);
-        pokeFuego = new PokemonFuego("fuego",2, 150, ataques2);
-        pokeAgua = new PokemonAgua("agua", 3, 80, ataques1);
-        pokeLucha = new PokemonLucha("lucha", 4, 70, ataques3);
-        pokePsiquico = new PokemonPsiquico("psiquico", 5, 50, ataques2);
-        pokeRayo = new PokemonRayo("pikachu", 6, 120, ataques3);
+        pokePlanta = new PokemonBasicoPlanta("planta",1, 100, ataques1);
+        pokeFuego = new PokemonBasicoFuego("fuego",2, 150, ataques2);
+        pokeAgua = new PokemonBasicoAgua("agua", 3, 80, ataques1);
+        pokeLucha = new PokemonBasicoLucha("lucha", 4, 70, ataques3);
+        pokePsiquico = new PokemonBasicoPsiquico("psiquico", 5, 50, ataques2);
+        pokeRayo = new PokemonBasicoRayo("pikachu", 6, 120, ataques3);
 
         planta = new EnergiaPlanta("p");
         fuego = new EnergiaFuego("f");

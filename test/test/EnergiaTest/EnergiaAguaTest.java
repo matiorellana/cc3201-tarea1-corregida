@@ -1,11 +1,18 @@
-package test;
+package test.EnergiaTest;
 
 import cc3201.tarea1.corregida.*;
+import cc3201.tarea1.corregida.Carta.Pokemon.Basico.PokemonBasicoAgua;
+import cc3201.tarea1.corregida.Habilidad.Ataque.Ataque;
+import cc3201.tarea1.corregida.Habilidad.Ataque.AtaqueAgua;
+import cc3201.tarea1.corregida.Carta.Energia.Energia;
+import cc3201.tarea1.corregida.Carta.Energia.EnergiaAgua;
+import cc3201.tarea1.corregida.Carta.Pokemon.Pokemon;
+import cc3201.tarea1.corregida.Carta.Pokemon.PokemonAgua;
+import cc3201.tarea1.corregida.Habilidad.IHabilidad;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import static org.junit.Assert.*;
 
@@ -15,7 +22,7 @@ public class EnergiaAguaTest {
     private Pokemon pokeAgua;
     private Energia agua;
     private Ataque atkAgua;
-    private ArrayList<Ataque> ataques;
+    private ArrayList<IHabilidad> ataques;
 
     @Before
     public void setUp() throws Exception {
@@ -25,7 +32,7 @@ public class EnergiaAguaTest {
         ataques = new ArrayList<>();
         ataques.add(atkAgua);
 
-        pokeAgua = new PokemonAgua("water", 1, 50, ataques);
+        pokeAgua = new PokemonBasicoAgua("water", 1, 50, ataques);
 
         entrenador = new Entrenador();
 
@@ -64,5 +71,11 @@ public class EnergiaAguaTest {
         valor = entrenador.getPokemonActivo().getEnergias().get("Agua");
 
         assertEquals(2, valor);
+    }
+
+    @Test
+    public void getNombre(){
+
+        assertEquals("energia", agua.getNombre());
     }
 }

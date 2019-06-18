@@ -1,6 +1,17 @@
-package test;
+package test.AtaqueTest;
 
 import cc3201.tarea1.corregida.*;
+import cc3201.tarea1.corregida.Carta.Pokemon.Basico.PokemonBasicoAgua;
+import cc3201.tarea1.corregida.Carta.Pokemon.Basico.PokemonBasicoFuego;
+import cc3201.tarea1.corregida.Carta.Pokemon.Basico.PokemonBasicoPlanta;
+import cc3201.tarea1.corregida.Habilidad.Ataque.*;
+import cc3201.tarea1.corregida.Carta.Energia.Energia;
+import cc3201.tarea1.corregida.Carta.Energia.EnergiaPlanta;
+import cc3201.tarea1.corregida.Carta.Pokemon.Pokemon;
+import cc3201.tarea1.corregida.Carta.Pokemon.PokemonAgua;
+import cc3201.tarea1.corregida.Carta.Pokemon.PokemonFuego;
+import cc3201.tarea1.corregida.Carta.Pokemon.PokemonPlanta;
+import cc3201.tarea1.corregida.Habilidad.IHabilidad;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -25,7 +36,7 @@ public class AtaquePlantaTest {
     private Entrenador entrenador2;
     private Entrenador entrenador3;
 
-    ArrayList<Ataque> ataques1;
+    ArrayList<IHabilidad> ataques1;
 
     @Before
     public void setUp() throws Exception {
@@ -41,9 +52,9 @@ public class AtaquePlantaTest {
         ataques1.add(atkPlanta);
         ataques1.add(atkRayo);
 
-        pokePlanta = new PokemonPlanta("planta",1, 100, ataques1);
-        pokeFuego = new PokemonFuego("fuego", 2,100,ataques1);
-        pokeAgua = new PokemonAgua("agua", 3, 100, ataques1);
+        pokePlanta = new PokemonBasicoPlanta("planta",1, 100, ataques1);
+        pokeFuego = new PokemonBasicoFuego("fuego", 2,100,ataques1);
+        pokeAgua = new PokemonBasicoAgua("agua", 3, 100, ataques1);
 
         planta = new EnergiaPlanta("pirana_bros");
 

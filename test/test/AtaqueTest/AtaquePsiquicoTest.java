@@ -1,6 +1,19 @@
-package test;
+package test.AtaqueTest;
 
 import cc3201.tarea1.corregida.*;
+import cc3201.tarea1.corregida.Carta.Pokemon.Basico.PokemonBasicoFuego;
+import cc3201.tarea1.corregida.Carta.Pokemon.Basico.PokemonBasicoLucha;
+import cc3201.tarea1.corregida.Carta.Pokemon.Basico.PokemonBasicoPsiquico;
+import cc3201.tarea1.corregida.Habilidad.Ataque.Ataque;
+import cc3201.tarea1.corregida.Habilidad.Ataque.AtaqueLucha;
+import cc3201.tarea1.corregida.Habilidad.Ataque.AtaquePsiquico;
+import cc3201.tarea1.corregida.Carta.Energia.Energia;
+import cc3201.tarea1.corregida.Carta.Energia.EnergiaPsiquico;
+import cc3201.tarea1.corregida.Carta.Pokemon.Pokemon;
+import cc3201.tarea1.corregida.Carta.Pokemon.PokemonFuego;
+import cc3201.tarea1.corregida.Carta.Pokemon.PokemonLucha;
+import cc3201.tarea1.corregida.Carta.Pokemon.PokemonPsiquico;
+import cc3201.tarea1.corregida.Habilidad.IHabilidad;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -19,7 +32,7 @@ public class AtaquePsiquicoTest {
     private Ataque atkLucha;
     private Ataque atkPsiquico;
 
-    ArrayList<Ataque> ataques2;
+    ArrayList<IHabilidad> ataques2;
 
     private Entrenador entrenador1;
     private Entrenador entrenador2;
@@ -31,13 +44,13 @@ public class AtaquePsiquicoTest {
         atkLucha = new AtaqueLucha("d4", 30, 7, "prueba4");
         atkPsiquico = new AtaquePsiquico("e5", 25, 8, "prueba5");
 
-        ataques2 = new ArrayList<Ataque>();
+        ataques2 = new ArrayList<>();
         ataques2.add(atkLucha);
         ataques2.add(atkPsiquico);
 
-        pokeFuego = new PokemonFuego("fuego",2, 150, ataques2);
-        pokeLucha = new PokemonLucha("ken", 4, 100, ataques2);
-        pokePsiquico = new PokemonPsiquico("abra", 5, 100, ataques2);
+        pokeFuego = new PokemonBasicoFuego("fuego",2, 150, ataques2);
+        pokeLucha = new PokemonBasicoLucha("ken", 4, 100, ataques2);
+        pokePsiquico = new PokemonBasicoPsiquico("abra", 5, 100, ataques2);
 
         psiquico = new EnergiaPsiquico("p");
 

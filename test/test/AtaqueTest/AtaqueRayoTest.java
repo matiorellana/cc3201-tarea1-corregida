@@ -1,6 +1,16 @@
-package test;
+package test.AtaqueTest;
 
 import cc3201.tarea1.corregida.*;
+import cc3201.tarea1.corregida.Carta.Pokemon.Basico.PokemonBasicoAgua;
+import cc3201.tarea1.corregida.Carta.Pokemon.Basico.PokemonBasicoRayo;
+import cc3201.tarea1.corregida.Habilidad.Ataque.Ataque;
+import cc3201.tarea1.corregida.Habilidad.Ataque.AtaqueRayo;
+import cc3201.tarea1.corregida.Carta.Energia.Energia;
+import cc3201.tarea1.corregida.Carta.Energia.EnergiaRayo;
+import cc3201.tarea1.corregida.Carta.Pokemon.Pokemon;
+import cc3201.tarea1.corregida.Carta.Pokemon.PokemonAgua;
+import cc3201.tarea1.corregida.Carta.Pokemon.PokemonRayo;
+import cc3201.tarea1.corregida.Habilidad.IHabilidad;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -16,7 +26,7 @@ public class AtaqueRayoTest {
     private Energia rayo;
 
     private Ataque atkRayo;
-    ArrayList<Ataque> ataques3;
+    ArrayList<IHabilidad> ataques3;
 
     private Entrenador entrenador;
     private Entrenador rival;
@@ -25,11 +35,11 @@ public class AtaqueRayoTest {
     public void setUp() throws Exception {
 
         atkRayo = new AtaqueRayo("f6", 7, 10, "prueba6");
-        ataques3 = new ArrayList<Ataque>();
+        ataques3 = new ArrayList<>();
         ataques3.add(atkRayo);
 
-        pokeRayo = new PokemonRayo("pikachu", 6, 120, ataques3);
-        pokeAgua = new PokemonAgua("aquaman", 9,30, ataques3);
+        pokeRayo = new PokemonBasicoRayo("pikachu", 6, 120, ataques3);
+        pokeAgua = new PokemonBasicoAgua("aquaman", 9,30, ataques3);
 
         rayo = new EnergiaRayo("r");
 
