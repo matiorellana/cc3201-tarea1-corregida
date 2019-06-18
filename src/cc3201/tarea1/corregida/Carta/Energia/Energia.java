@@ -19,9 +19,7 @@ public abstract class Energia implements IEnergia {
     @Override
     public void jugar(Entrenador entrenador) {
 
-        System.out.println("Ingresa numero para elegir pokemon de la banca:");
-        int index = scanner.nextInt();
-        entrenador.getBanca().get(index).addEnergia(this);
+        entrenador.getPokemonActivo().addEnergia(this);
     }
 
     @Override

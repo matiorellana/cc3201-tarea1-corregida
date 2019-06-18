@@ -9,7 +9,7 @@ public class Potion extends Objeto implements IObjeto {
 
     private Scanner scanner;
 
-    protected Potion() {
+    public Potion() {
 
         super("Potion", "Remueve hasta 2 contadores de daño de uno de tus Pokémon.");
         scanner = new Scanner(System.in);

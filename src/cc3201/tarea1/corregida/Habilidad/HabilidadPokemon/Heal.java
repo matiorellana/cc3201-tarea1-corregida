@@ -36,4 +36,9 @@ public class Heal extends Habilidad implements IHabilidad {
             jugador.getBanca().get(index).setSalud(seleccionado.getHp() + 10);
         }
     }
+
+    @Override
+    public boolean comprobar(Pokemon pokemonActivo) {
+        return false;
+    }
 }

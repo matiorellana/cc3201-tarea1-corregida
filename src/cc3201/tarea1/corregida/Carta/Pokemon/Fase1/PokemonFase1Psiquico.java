@@ -5,12 +5,14 @@ import cc3201.tarea1.corregida.Carta.Pokemon.IPokemon;
 import cc3201.tarea1.corregida.Carta.Pokemon.PokemonPsiquico;
 import cc3201.tarea1.corregida.Carta.Pokemon.VisitorPokemon;
 import cc3201.tarea1.corregida.Entrenador;
+import cc3201.tarea1.corregida.Habilidad.IHabilidad;
 
 import java.util.ArrayList;
 
 public class PokemonFase1Psiquico extends PokemonPsiquico implements IPokemon, PokemonFase1 {
 
-    public PokemonFase1Psiquico(String nombre, int id, int salud, ArrayList<Ataque> ataques){
+    private VisitorPokemon visitor = new VisitorPokemon();
+    public PokemonFase1Psiquico(String nombre, int id, int salud, ArrayList<IHabilidad> ataques){
 
         super(nombre, id, salud, ataques);
     }

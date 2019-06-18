@@ -2,12 +2,13 @@ package cc3201.tarea1.corregida.Carta.Pokemon;
 
 import cc3201.tarea1.corregida.Habilidad.Ataque.Ataque;
 import cc3201.tarea1.corregida.Entrenador;
+import cc3201.tarea1.corregida.Habilidad.IHabilidad;
 
 import java.util.ArrayList;
 
 public abstract class PokemonPlanta extends Pokemon implements IPokemon {
 
-    public PokemonPlanta(String nombre, int id, int salud, ArrayList<Ataque> ataques) {
+    public PokemonPlanta(String nombre, int id, int salud, ArrayList<IHabilidad> ataques) {
 
         super(nombre, id, salud, ataques);
     }

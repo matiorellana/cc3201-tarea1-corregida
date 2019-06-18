@@ -3,6 +3,7 @@ package cc3201.tarea1.corregida.Carta.Pokemon;
 import cc3201.tarea1.corregida.Habilidad.Ataque.Ataque;
 import cc3201.tarea1.corregida.Carta.Energia.Energia;
 import cc3201.tarea1.corregida.Entrenador;
+import cc3201.tarea1.corregida.Habilidad.IHabilidad;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -12,12 +13,11 @@ public abstract class Pokemon implements IPokemon {
     protected int id;
     protected int salud;
     protected String nombre;
-    protected Ataque ataqueSeleccionado;
-    protected ArrayList<Ataque> ataques;
+    protected IHabilidad ataqueSeleccionado;
+    protected ArrayList<IHabilidad> ataques;
     protected HashMap<String, Integer> energias;
-    protected VisitorPokemon visitor;
 
-    protected Pokemon(String nombre, int id, int salud, ArrayList<Ataque> ataques) {
+    protected Pokemon(String nombre, int id, int salud, ArrayList<IHabilidad> ataques) {
 
         this.nombre = nombre;
         this.id = id;
@@ -86,7 +86,7 @@ public abstract class Pokemon implements IPokemon {
     }
 
     @Override
-    public Ataque getAtaqueSeleccionado() {
+    public IHabilidad getAtaqueSeleccionado() {
 
         return this.ataqueSeleccionado;
     }

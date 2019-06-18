@@ -3,6 +3,7 @@ package cc3201.tarea1.corregida.Carta.Pokemon;
 import cc3201.tarea1.corregida.Habilidad.Ataque.Ataque;
 import cc3201.tarea1.corregida.Carta.Carta;
 import cc3201.tarea1.corregida.Carta.Energia.Energia;
+import cc3201.tarea1.corregida.Habilidad.IHabilidad;
 
 import java.util.HashMap;
 
@@ -22,7 +23,7 @@ public interface IPokemon extends Carta {
 
     void seleccionarAtaque(int index);
 
-    Ataque getAtaqueSeleccionado();
+    IHabilidad getAtaqueSeleccionado();
 
     HashMap<String, Integer> getEnergias();
 

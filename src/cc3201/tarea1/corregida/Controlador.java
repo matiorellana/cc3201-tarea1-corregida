@@ -3,13 +3,9 @@ package cc3201.tarea1.corregida;
 import cc3201.tarea1.corregida.Carta.Carta;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Controlador {
 
-    private Entrenador jugador = new Entrenador();
-    private Entrenador rival = new Entrenador();
-    private Scanner scanner = new Scanner(System.in);
     private int turno = 0;
 
     public void robarCarta(Entrenador entrenador) {
@@ -66,11 +62,21 @@ public class Controlador {
 
     public void ataque(Entrenador jugador, Entrenador rival){
 
-        int hpRival = rival.getPokemonActivo().getHp();
         jugador.atacar(rival);
-        if (hpRival > rival.getPokemonActivo().getHp()){
-            this.terminarTurno();
+        this.terminarTurno();
+    }
+
+    public void setTurno(){
+        if(turno == 1){
+            this.turno = 0;
         }
+        else{
+            this.turno = 1;
+        }
+    }
+
+    public int getTurno(){
+        return this.turno;
     }
 }
 
